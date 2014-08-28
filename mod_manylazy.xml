@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+    type="module"
+    version="2.5"
+    client="site"
+    method="upgrade">
+    <name>Lazy товары VM2 webislife</name>
+    <author>Строков Денис</author>
+    <creationDate>2014-08-27</creationDate>
+    <copyright>Разработано webislife.ru</copyright>
+    <license>GPL 2.0</license>
+    <authorEmail>info@webislife.ru</authorEmail>
+    <authorUrl>webislife.ru</authorUrl>
+    <!--Версия модуля-->
+    <version>1.0</version>
+    <description>Выводит все товары lazy ajax способом, превращая магазин в бесконечный скролл.</description>
+
+    <files>
+        <filename module="mod_manylazy">mod_manylazy.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+    </files>
+
+    <config> 
+        <fields name="params">> 
+            <fieldset name="basic"> 
+                <field
+                    name="prod_count"
+                    type="text"
+                    label="Количество товаров в строке"
+                    description="Количество выводимых товаров в строке"
+                    default="5"                
+                />
+            </fieldset>
+        </fields>      
+    </config>
+</extension>
